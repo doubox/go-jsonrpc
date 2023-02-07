@@ -331,7 +331,7 @@ func (s *RPCServer) handle(ctx context.Context, req request, w func(func(io.Writ
 	if handler.errOut != -1 {
 		err := callResult[handler.errOut].Interface()
 		if err != nil {
-			log.Warnf("error in RPC call to '%s': %+v", req.Method, err)
+			//log.Warnf("error in RPC call to '%s': %+v", req.Method, err)
 			stats.Record(ctx, metrics.RPCResponseError.M(1))
 
 			resp.Error = s.createError(err.(error))
