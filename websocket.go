@@ -546,7 +546,7 @@ func (c *wsConn) tryReconnect(ctx context.Context) bool {
 		c.conn = conn
 		c.incomingErr = nil
 
-		c.stopPings = c.setupPings()
+		//c.stopPings = c.setupPings()
 
 		c.writeLk.Unlock()
 
